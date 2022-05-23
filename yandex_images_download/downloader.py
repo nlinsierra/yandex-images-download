@@ -36,7 +36,7 @@ def get_driver(name: str, path: Optional[str]) -> Driver:
         options.add_argument("no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.set_headless()
-        return driver_class(options)
+        return driver_class(chrome_options=options)
     return driver_class(**args)
 
 
