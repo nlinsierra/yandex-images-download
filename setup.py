@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-__version__ = 'v1.0.4'
+__version__ = 'v1.0.5'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -31,7 +31,7 @@ setup(
     keywords='yandex images download save terminal command-line scrapper',
     install_requires=install_requires,
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.7',
