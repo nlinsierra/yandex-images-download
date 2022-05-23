@@ -31,7 +31,12 @@ DRIVER_NAME_TO_CLASS = {
 def get_driver(name: str, path: Optional[str]) -> Driver:
     driver_class = DRIVER_NAME_TO_CLASS[name]
     args = {'executable_path': path} if path else {}
-
+    if name == 'Chrome':
+        options = webdriver.ChromeOptions()
+        options.add_argument("no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.set_headless()
+        return driver_class(options)
     return driver_class(**args)
 
 
